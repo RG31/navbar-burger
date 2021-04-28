@@ -12,11 +12,16 @@ function Nav() {
         /* on edite la valeur (affiche les links) 
            que si showlinks est différent de (false) et à true on l'active */
     }
+    /* console.log(showLinks);*/
+
     return (
-        /* si classe chow-nav activée => on affiche */
-        <nav className="navbar show-nav">
-           <div className="navbar__logo">Logo</div> 
-           <ul className="navbar__links">
+        /* si classe chow-nav activée => on affiche 
+        <nav className="navbar show-nav"> 
+        on passe en jajascript pour effectuer la condition
+        */    
+        <nav className={`navbar ${ showLinks ? "show-nav" : "hide-nav"} `}>
+            <div className="navbar__logo">Logo</div> 
+            <ul className="navbar__links">
                <li className="navbar__item">
                    <a href="/" className="navbar__link"> 
                    Accueil

@@ -32,7 +32,7 @@
     margin-right: 2rem; /* pour ne pas être caché par le scroll bar */
     border: none;
     color: inherit; 
-    /*display:none; /* on efface le burger pour le DESKTOP)=> sinon on décale tout, mieux de le rendre transparent */
+    /*display:none; /* on masque le burger pour le DESKTOP)=> sinon on décale tout, mieux de le rendre transparent */
 }
 
 @media screen and (max-width:767px) {
@@ -42,16 +42,28 @@
         justify-content: center;
         align-items: center;   
         position: fixed;
-        background-color: black;
         /* on affiche tout le menu sur fond noir à la place du texte 
         left: 0;
         right: 0; */
-        /* on fait disparaître tout le menu, on ne garde que le burger */
+        /* on masque le menu, on ne garde que le burger */
         right:-100vh;
-
         bottom: 0;
         height: 100vh;
         padding:2rem;
+        /* pour être sûr */
+        /*
+        Là où visibility:hidden laissera un espace entre les éléments précédant et suivant
+        l'élément rendu invisible, display:none "efface" l'élément ciblé sans laisser de trace : 
+        les éléments précédents et suivants se retrouvent côte à côte, comme si l'élément visé n'existait pas.
+        */
+        visibility: hidden;
+        background-color: black;
+    }
+
+    .show-nav .navbar__links {
+        left: 0; /* ou width:100vw */
+        right: 0; 
+        visibility:visible ;
     }
 
     /* style du menu */
@@ -72,7 +84,6 @@
 
     .navbar__burger:hover {
         cursor: pointer;
-
     }
 
     .burger-bar,
