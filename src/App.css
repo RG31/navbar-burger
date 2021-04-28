@@ -1,3 +1,8 @@
+/* Poppins FONT STYLE https://fonts.google.com/specimen/Poppins : multi selection + import + récup code between <stlye> ... </style> + delete swap (react incompatible) 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300'); */
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,9 +11,19 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* CSS rules to specify families ... récupéré de l'import ci-dessus*/
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* RESET */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }

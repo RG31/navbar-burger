@@ -1,5 +1,5 @@
 import React from 'react';
-//
+import "./Nav.css";
 
 function Nav() {
     return (
@@ -32,6 +32,10 @@ function Nav() {
                     </a>
                </li>
            </ul>
+           <button className="navbar__burger">
+            <span className="burger-bar">
+                </span>         
+           </button>
         </nav>
     )
 }

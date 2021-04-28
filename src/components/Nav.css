@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    /* ne pas dépasser sur les bords*/
+    flex-wrap: wrap; 
+    align-items: center;
+    /* répartir l'espace */
+    justify-content: space-between;
+    /* Ma navbar noire couleur et taille */
+    position: fixed;
+    width: 100%;
+    min-height: 75px;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.navbar__links {
+    /* en lignbe */
+    display: flex;
+}
+
+.navbar__link {
+    padding: 0 0.3rem;
+    /* hérité du parent */
+    color: inherit;
+}
+.navbar__burger{
+
+}
+
+.burger-bar {
+
+}
