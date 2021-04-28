@@ -1,9 +1,20 @@
-import React from 'react';
+import React from "react";
 import "./Nav.css";
+import { useState } from "react" ; 
+    
+   
 
 function Nav() {
+    const  [showLinks, setShowLinks] = useState(false);
+    /* button navbar-burger => onClick () */
+    const handleShowLinks = () => {
+        setShowLinks(!showLinks)
+        /* on edite la valeur (affiche les links) 
+           que si showlinks est différent de (false) et à true on l'active */
+    }
     return (
-        <nav className="navbar">
+        /* si classe chow-nav activée => on affiche */
+        <nav className="navbar show-nav">
            <div className="navbar__logo">Logo</div> 
            <ul className="navbar__links">
                <li className="navbar__item">
@@ -32,7 +43,7 @@ function Nav() {
                     </a>
                </li>
            </ul>
-           <button className="navbar__burger">
+           <button className="navbar__burger" onClick= {handleShowLinks} >
             <span className="burger-bar">
                 </span>         
            </button>
