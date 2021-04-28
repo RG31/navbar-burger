@@ -7,7 +7,7 @@
     justify-content: space-between;
     /* Ma navbar noire couleur et taille */
     position: fixed;
-    width: 100%;
+    width: 100%; 
     min-height: 75px;
     padding: 1rem;
     background-color: black;
@@ -15,7 +15,7 @@
 }
 
 .navbar__links {
-    /* en lignbe */
+    /* en ligne */
     display: flex;
 }
 
@@ -25,10 +25,11 @@
     color: inherit;
 }
 .navbar__burger{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     /* le carré menu burger transparent dans la NavBAr */
     background: transparent ;
+    margin-right: 2rem; /* pour ne pas être caché par le scroll bar */
     border: none;
     color: inherit; 
 }
@@ -38,15 +39,15 @@
         /* en colonne pour le Mobile */
         flex-direction: column;
         justify-content: center;
+        align-items: center;   
         position: fixed;
         background-color: black;
-        align-items: center;
          /* on couvre la window de black */
         left: 0;
         right: 0;
         bottom: 0;
         height: 100vh;
-        padding: 2rem;
+        padding:2rem;
     }
 
     /* style du menu */
@@ -56,4 +57,29 @@
         font-size: 5vw;
     }
 
+    /* burger menuv*/
+    .navbar__burger {
+    }
+
+    .burger-bar,
+    .burger-bar::before,
+    .burger-bar::after {
+        display: block;
+        width: 40px;
+        height: 3px;
+        position: relative;
+        border-radius: 3px;
+        background: cornsilk;
+        ;
+    }
+    .burger-bar::before,
+    .burger-bar::after {
+        content: "";
+    }
+    .burger-bar::before {
+        transform: translateY(-12px);
+    }
+    .burger-bar::after {
+        transform: translateY(12px);
+    }
 }

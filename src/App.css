@@ -12,13 +12,14 @@
 body {
   margin: 0;
   /* CSS rules to specify families ... récupéré de l'import ci-dessus*/
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, p {
-margin-bottom: 1rem;
+margin-bottom:1rem;
 }
 
 /* RESET */
@@ -32,8 +33,8 @@ a {
   text-decoration: none;
 }
 
-.main{
+.main {
   /* padding TOP pour affciher en dessous de la NavBar */
-  min-height: 200vh;
+  min-height: 150vh;
   padding:6rem 1rem 1rem;
 }
