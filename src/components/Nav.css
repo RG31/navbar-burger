@@ -28,10 +28,11 @@
     width: 50px;
     height: 50px;
     /* le carré menu burger transparent dans la NavBAr */
-    background: transparent ;
+    background: transparent ; /* on rend transparend le burger pour le DESKTOP) */
     margin-right: 2rem; /* pour ne pas être caché par le scroll bar */
     border: none;
     color: inherit; 
+    /*display:none; /* on efface le burger pour le DESKTOP)=> sinon on décale tout, mieux de le rendre transparent */
 }
 
 @media screen and (max-width:767px) {
@@ -59,17 +60,29 @@
 
     /* burger menuv*/
     .navbar__burger {
+        display:block; /* on affiche le burger en mobile */
+        /* pour que le curseur pointe su rl'ensemble des 3 traits*/
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
     }
+
+    .navbar__burger:hover {
+        cursor: pointer;
+
+    }
+
+
 
     .burger-bar,
     .burger-bar::before,
     .burger-bar::after {
         display: block;
-        width: 40px;
+        width: 45px;
         height: 3px;
         position: relative;
         border-radius: 3px;
-        background: cornsilk;
+        background:  white;
         ;
     }
     .burger-bar::before,
@@ -80,6 +93,6 @@
         transform: translateY(-12px);
     }
     .burger-bar::after {
-        transform: translateY(12px);
+        transform: translateY(9.5px);
     }
 }
