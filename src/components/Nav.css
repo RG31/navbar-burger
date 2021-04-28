@@ -25,7 +25,12 @@
     color: inherit;
 }
 .navbar__burger{
-
+    width: 40px;
+    height: 40px;
+    /* le carré menu burger transparent dans la NavBAr */
+    background: transparent ;
+    border: none;
+    color: inherit; 
 }
 
 .burger-bar {
