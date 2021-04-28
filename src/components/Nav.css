@@ -33,6 +33,27 @@
     color: inherit; 
 }
 
-.burger-bar {
+@media screen and (max-width:767px) {
+    .navbar__links {
+        /* en colonne pour le Mobile */
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        background-color: black;
+        align-items: center;
+         /* on couvre la window de black */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        padding: 2rem;
+    }
+
+    /* style du menu */
+    .navbar__link {
+        display: block;
+        padding: 1.5rem;
+        font-size: 5vw;
+    }
 
 }
