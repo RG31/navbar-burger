@@ -22,27 +22,27 @@ function Nav() {
         <nav className={`navbar ${ showLinks ? "show-nav" : "hide-nav"} `}>
             <div className="navbar__logo">Logo</div> 
             <ul className="navbar__links">
-               <li className="navbar__item">
+               <li className="navbar__item slideInDown-1">
                    <a href="/" className="navbar__link"> 
                    Accueil
                    </a>
                </li>
-               <li className="navbar__item">
+               <li className="navbar__item slideInDown-2">
                    <a href="/" className="navbar__link"> 
                    Portofolio
                    </a>
                </li>
-               <li className="navbar__item">
+               <li className="navbar__item slideInDown-3">
                    <a href="/" className="navbar__link">
                     Services
                     </a>
                </li>
-               <li className="navbar__item">
+               <li className="navbar__item slideInDown-4">
                    <a href="/" className="navbar__link">
                     A propos
                     </a>
                </li>
-               <li className="navbar__item">
+               <li className="navbar__item slideInDown-5">
                    <a href="/" className="navbar__link">
                     Contact
                     </a>
