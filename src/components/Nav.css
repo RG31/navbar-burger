@@ -25,6 +25,7 @@
     color: inherit;
 }
 .navbar__burger{
+    outline: none;
     width: 50px;
     height: 50px;
     /* le carré menu burger transparent dans la NavBAr */
@@ -73,8 +74,9 @@
         font-size: 5vw;
     }
 
-    /* burger menuv*/
+    /* burger menu */
     .navbar__burger {
+        outline: none;
         display:block; /* on affiche le burger en mobile */
         /* pour que le curseur pointe sur l'ensemble des 3 traits*/
         position: fixed;
@@ -95,16 +97,30 @@
         position: relative;
         border-radius: 3px;
         background:  white;
-        ;
+        transition: all .5s ease-in ;        
     }
     .burger-bar::before,
     .burger-bar::after {
         content: "";
+        outline: none;
     }
     .burger-bar::before {
-        transform: translateY(-12px);
+        transform: translateY(-10px);
     }
     .burger-bar::after {
-        transform: translateY(9.5px);
+        transform: translateY(10px);
     }
-}
+    .show-nav .burger-bar::before {
+        transform: rotate(45deg);
+        width: 15px;
+        height: 0.3px;
+    }
+    .show-nav .burger-bar::after {
+        transform: rotate(-45deg);
+        width: 15px;
+        height: 0.3px;
+    }}
+    .show-nav .burger-bar {
+        width: 0;
+        background: transparent;
+    }
