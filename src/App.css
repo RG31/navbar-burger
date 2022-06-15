@@ -36,5 +36,5 @@ a {
 .main {
   /* padding TOP pour affciher en dessous de la NavBar */
   min-height: 150vh;
-  padding:6rem 1rem 1rem;
+  padding: 6rem 1rem 1rem;
 }
